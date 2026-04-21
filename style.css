@@ -271,13 +271,78 @@ body {
     font-style: italic;
 }
 
-/* Footer */
-.footer {
-    background-color: var(--accent-color);
-    color: var(--secondary-bg);
-    padding: 3rem 2rem;
-    margin-top: 4rem;
+/* Rating System */
+.rating-card {
+    border-left: 4px solid var(--accent-color);
+    background: linear-gradient(135deg, var(--secondary-bg) 0%, var(--highlight-bg) 100%);
+}
+
+.rating-stars {
+    display: flex;
+    gap: 5px;
+    margin: 1rem 0;
+    justify-content: center;
+}
+
+.star {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.star:hover,
+.star.active {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.star:hover ~ .star {
+    color: #ddd;
+}
+
+.rating-display {
     text-align: center;
+    margin-top: 1rem;
+}
+
+.current-rating {
+    margin-bottom: 0.8rem;
+}
+
+.rating-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    display: block;
+}
+
+.rating-stars-display {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.rating-count {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    display: block;
+    margin-top: 0.3rem;
+}
+
+.your-rating {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    padding: 0.5rem;
+    background: var(--primary-bg);
+    border-radius: 6px;
+    border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+#user-rating {
+    font-weight: 600;
+    color: var(--accent-color);
 }
 
 .footer-content p {
@@ -301,6 +366,20 @@ body {
 
 .social-link:hover {
     opacity: 0.8;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--accent-color);
+    color: var(--secondary-bg);
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.footer-content p {
+    margin-bottom: 1rem;
+    opacity: 0.9;
 }
 
 /* Responsive Design */
